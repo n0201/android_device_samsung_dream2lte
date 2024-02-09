@@ -23,11 +23,18 @@ $(call inherit-product, device/samsung/dream2lte/device.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 # Inherit some common Lineage stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+$(call inherit-product, vendor/derp/config/common_full_phone.mk)
+
+# Blur
+TARGET_ENABLE_BLUR := true
+
+# DerpFest
+DERP_BUILDTYPE := Official
+DERP_CODENAME := Beta
 
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := dream2lte
-PRODUCT_NAME := lineage_dream2lte
+PRODUCT_NAME := derp_dream2lte
 PRODUCT_BRAND := samsung
 PRODUCT_MODEL := SM-G955F
 PRODUCT_MANUFACTURER := samsung
